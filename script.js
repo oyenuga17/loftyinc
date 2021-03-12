@@ -17,7 +17,7 @@ if (name1 == name2){
 }
 else { console.log ("not same")};*/
 // test for room temperature
-let temp1=  12
+/*let temp1=  12
 
 if ( temp1 <= 38){
     console.log ( "good to go");
@@ -57,14 +57,35 @@ let y= parseInt(input2);
 console.log (input)
 */
 
-
+/*
 let guessNumber = 4;
 let userGuessNumber = parseInt (prompt ("what is the number ?"));
 if ( guessNumber === userGuessNumber){
     console.log ( "you are right!");
     
 }
-else {console.log("you are wrong!")}
+else {console.log("you are wrong!")}*/
+
+// Game of trials
+let guessNumber = 4;
+let userGuessNumber = parseInt (prompt ("what is the number ?"));
+for ( i = 0;  i <4; i++){
+    //console.log('userGuessNumber: ', userGuessNumber)
+    if (userGuessNumber === guessNumber){
+        console.log( "Congratulation! you guessed right.");
+        break;  
+    }
+   
+    else  {
+    userGuessNumber = parseInt (prompt ("Have another guess! What is the number?"));
+    
+    console.log( "Try again!");  
+}
+}
+if ( userGuessNumber !== guessNumber){
+    console.log ( "Number of trials exceeded")
+}
+
 
 
 
